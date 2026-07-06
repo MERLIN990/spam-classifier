@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Artefactos de entrenamiento (se regeneran con `python -m model.train`
+# o automáticamente durante `docker build`, ver Dockerfile)
+model/spam_classifier.joblib
+model/metrics.json
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+.DS_Store
+.vscode/
+.idea/
+
+.env

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+.venv/
+venv/
+.pytest_cache/
+tests/
+docs/
+*.md
+.DS_Store
+model/spam_classifier.joblib
+model/metrics.json

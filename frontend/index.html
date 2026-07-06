@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Detector de Spam</title>
+<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Detector de Spam</h1>
+    <p class="subtitle">Clasificador de texto (spam / ham) &mdash; Fase 2, Gestión de proyectos de IA</p>
+
+    <label for="text-input">Mensaje a analizar</label>
+    <textarea id="text-input" rows="5" placeholder="Pega aquí un SMS o correo, por ejemplo: 'Felicidades, ganaste un premio, reclama en http://bit.ly/premio'"></textarea>
+
+    <button id="analyze-btn">Analizar</button>
+
+    <section id="result" class="result hidden">
+      <div class="label-badge" id="label-badge">-</div>
+      <div class="prob-row">
+        <span>Spam</span>
+        <div class="prob-bar"><div id="spam-bar" class="prob-fill spam"></div></div>
+        <span id="spam-value">0%</span>
+      </div>
+      <div class="prob-row">
+        <span>Ham</span>
+        <div class="prob-bar"><div id="ham-bar" class="prob-fill ham"></div></div>
+        <span id="ham-value">0%</span>
+      </div>
+    </section>
+
+    <p id="error-msg" class="error hidden"></p>
+    <p id="health" class="health"></p>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Blueprint de Render (Infraestructura como Código) — OPCIONAL.
+# Permite crear el servicio automáticamente con "New > Blueprint" en Render
+# en lugar de configurarlo manualmente en el dashboard. Ver
+# docs/MANUAL_DESPLIEGUE.md para el flujo paso a paso por dashboard (el
+# método principal documentado para esta entrega).
+services:
+  - type: web
+    name: spam-detector
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
