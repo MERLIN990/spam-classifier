@@ -62,6 +62,14 @@ Matriz de confusión (conjunto de prueba, 200 mensajes):
 | **Real: ham** | 140 (TN) | 0 (FP) |
 | **Real: spam** | 0 (FN) | 60 (TP) |
 
+> **Nota de reproducibilidad:** estos valores son representativos de una
+> corrida de desarrollo. `train_test_split` usa `random_state=42`, por lo
+> que tu ejecución de `python -m model.train` será determinista, pero el
+> split exacto puede variar levemente según la versión de scikit-learn.
+> El comando genera `model/metrics.json` con tus cifras oficiales:
+> reemplaza la tabla anterior por ese resultado antes de entregar el
+> proyecto si difiere.
+
 Pruebas funcionales puntuales (`tests/test_model.py`, `tests/test_api.py`):
 
 - Mensajes de spam evidentes (premios, phishing, préstamos, urgencia) → clasificados correctamente como `spam`.
